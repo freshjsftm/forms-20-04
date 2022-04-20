@@ -10,6 +10,7 @@
   <body>
     <h1>Example form</h1>
     <form class="form flex-column" action="">
+      <input type="hidden" name="system" value="system">
       <fieldset>
         <legend>Personal data</legend>
         <label class="flex-column">
@@ -35,33 +36,33 @@
         <legend>Choose gender</legend>
         <label>
           <span>male</span>
-          <input type="radio" name="gender" value="1" checked/>
+          <input type="radio" name="gender" value="1" checked />
         </label>
         <label>
           <span>female</span>
-          <input type="radio" name="gender" value="0"/>
+          <input type="radio" name="gender" value="0" />
         </label>
       </fieldset>
       <fieldset>
         <legend>Adult</legend>
         <label>
           <span>adult</span>
-          <input type="checkbox" name="adult" value="adult"/>
+          <input type="checkbox" name="adult" value="adult" />
         </label>
       </fieldset>
       <fieldset>
         <legend>Courses</legend>
         <label>
           <span>css</span>
-          <input type="checkbox" name="courses" value="css"/>
+          <input type="checkbox" name="courses" value="css" />
         </label>
         <label>
           <span>html</span>
-          <input type="checkbox" name="courses" value="html" checked/>
+          <input type="checkbox" name="courses" value="html" checked />
         </label>
         <label>
           <span>js</span>
-          <input type="checkbox" name="courses" value="js"/>
+          <input type="checkbox" name="courses" value="js" />
         </label>
       </fieldset>
       <fieldset>
@@ -70,13 +71,28 @@
       </fieldset>
       <fieldset>
         <legend>Select town</legend>
-        <select name="town" multiple size="5">
-          <option value="1">Zp</option>
-          <option value="2">NY</option>
-          <option value="3">Dp</option>
-          <option value="4" >Chornobaevka</option>
-          <option value="5">LA</option>
+        <select name="town">
+          <optgroup label="uk">
+            <option value="1">Zp</option>
+            <option value="3">Dp</option>
+            <option value="4" selected>Chornobaevka</option>
+          </optgroup>
+          <optgroup label="us">
+            <option value="2">NY</option>
+            <option value="5">LA</option>
+          </optgroup>
         </select>
+      </fieldset>
+      <fieldset>
+        <legend>Select super hero</legend>
+        <datalist id="superhero">
+          <option value="Betman">
+          <option value="Robin">
+          <option value="Robin Good">
+          <option value="Deadpool">
+          <option value="Spiderman">
+        </datalist>
+        <input type="text" name="hero" list="superhero">
       </fieldset>
       <input type="submit" value="send" />
       <input type="reset" value="reset" />
