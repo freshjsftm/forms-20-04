@@ -1,0 +1,16 @@
+h1{
+  text-align: center;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 300px;
+  min-height: 300px;
+  padding: 1em;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #eee;
+  font-family: sans-serif;
+}
