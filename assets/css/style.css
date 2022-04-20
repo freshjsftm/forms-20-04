@@ -2,6 +2,7 @@ h1 {
   text-align: center;
 }
 form,
+fieldset,
 input{
   border: 1px solid #ccc;
   border-radius: 5px;
