@@ -6,6 +6,7 @@ fieldset,
 input{
   border: 1px solid #ccc;
   border-radius: 5px;
+  
 }
 legend{
   max-width: 250px;
@@ -19,6 +20,7 @@ legend{
   flex-direction: column;
 }
 .form {
+  
   justify-content: space-around;
   max-width: 300px;
   min-height: 300px;
@@ -35,7 +37,25 @@ form.flex-column input:focus{
   outline: none;
   box-shadow: inset 0 0 3px #aaa;
 }
+input[type="radio"]::after{
+  content: url(./../icons/check.svg);
+  visibility: visible;
+}
+input[type="radio"]:checked::after{
+  content: url(./../icons/check-all.svg);
+  visibility: visible;
+}
+input[type="radio"]{
+  margin-right: 15px;
+  visibility: hidden;
+  transform: translateY(-5px);
+}
 
+::placeholder {
+  color: blue;
+  font-size: 1.5em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
 
 
