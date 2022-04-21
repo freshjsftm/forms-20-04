@@ -1,48 +1,16 @@
-h1 {
-  width: 40%;
-
-  /* transform: rotate(360deg);
-  transform-origin: top right; */
-  transition: transform .2s;
-
-  background-color: aquamarine;
+h1{
+  column-span: all;
   text-align: center;
 }
-h1:hover{
-  transform: rotate(2turn);
-}
-body{
-  background-color:aquamarine;
-}
-.container{
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly; */
-  text-align: center;
-}
-.user-card{
-  display: inline-flex;
-  max-width: 520px;
-  min-height: 360px;
-  margin: 0 7px 15px;
-  background-color:white;
-}
-.user-avatar{
-  width: 55%;
-  object-fit: cover;
-  /* object-position: 58% 50%; */
-  clip-path: polygon(0 0, 100% 0, 73% 100%, 0% 100%);
-  filter: grayscale(100%) blur(5px);
-  transition: filter .5s;
-}
-.user-avatar:hover{
-  filter: grayscale(100%) blur(0px);
-}
-.info{
+main{
+  max-width: 1800px;
   margin: auto;
-  margin-left: 1%;
-}
-.info>h2{
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  padding: 0 5em;
+  /* column-count: 3;
+  column-width: 300px; */
+  columns: 4 300px;
+  column-rule: 3px double #aaa;
+  column-gap: 5em;
+  column-fill: balance;
+  text-align: justify;
 }
