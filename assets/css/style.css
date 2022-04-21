@@ -11,3 +11,38 @@ h1 {
 h1:hover{
   transform: rotate(2turn);
 }
+body{
+  background-color:aquamarine;
+}
+.container{
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; */
+  text-align: center;
+}
+.user-card{
+  display: inline-flex;
+  max-width: 520px;
+  min-height: 360px;
+  margin: 0 7px 15px;
+  background-color:white;
+}
+.user-avatar{
+  width: 55%;
+  object-fit: cover;
+  /* object-position: 58% 50%; */
+  clip-path: polygon(0 0, 100% 0, 73% 100%, 0% 100%);
+  filter: grayscale(100%) blur(5px);
+  transition: filter .5s;
+}
+.user-avatar:hover{
+  filter: grayscale(100%) blur(0px);
+}
+.info{
+  margin: auto;
+  margin-left: 1%;
+}
+.info>h2{
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
